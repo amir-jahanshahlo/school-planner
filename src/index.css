@@ -11,3 +11,30 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.fc-timegrid-now-indicator-container {
+  overflow: visible !important;
+  .fc-timegrid-now-indicator-line {
+    width: calc(700% + 4px) !important; 
+  }
+}
+.fc-day-tue {
+  .fc-timegrid-now-indicator-line {
+    transform: translateX(-20%); 
+  }
+}
+.fc-day-wed {
+  .fc-timegrid-now-indicator-line {
+    transform: translateX(-40%);
+  }
+}
+.fc-day-thu {
+  .fc-timegrid-now-indicator-line {
+    transform: translateX(-60%);
+  }
+}
+.fc-day-fri {
+  .fc-timegrid-now-indicator-line {
+    transform: translateX(-80%);
+  }
+}
