@@ -3,6 +3,7 @@ import FullCalendar from "@fullcalendar/react";
 import timeGridPlugin from "@fullcalendar/timegrid";
 import dayGridPlugin from "@fullcalendar/daygrid";
 import interactionPlugin from "@fullcalendar/interaction";
+import '../component/style.css'
 
 function isDateToday(date) {
   const today = new Date();
@@ -29,9 +30,9 @@ function Calendar() {
         </div>
         <span
           style={{
-            fontSize: "14px",
+            fontSize: "15px",
             borderRadius: "50%",
-            padding: "2px",
+            padding: "3px",
             background: isToday ? "blue" : "transparent",
             color: isToday ? "white" : "black",
           }}
@@ -41,6 +42,7 @@ function Calendar() {
       </div>
     );
   };
+  
 
   return (
     <div>

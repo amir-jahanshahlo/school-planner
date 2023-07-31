@@ -12,29 +12,28 @@ code {
     monospace;
 }
 
-.fc-timegrid-now-indicator-container {
-  overflow: visible !important;
-  .fc-timegrid-now-indicator-line {
-    width: calc(700% + 4px) !important; 
-  }
-}
-.fc-day-tue {
-  .fc-timegrid-now-indicator-line {
-    transform: translateX(-20%); 
-  }
-}
-.fc-day-wed {
-  .fc-timegrid-now-indicator-line {
-    transform: translateX(-40%);
-  }
-}
-.fc-day-thu {
-  .fc-timegrid-now-indicator-line {
-    transform: translateX(-60%);
-  }
-}
-.fc-day-fri {
-  .fc-timegrid-now-indicator-line {
-    transform: translateX(-80%);
-  }
-}
+
+
+/* .fc .fc-timegrid-now-indicator-line {
+
+  opacity: .7;
+  
+  position: absolute;
+  
+  z-index: 4;
+  
+  left: 0;
+  
+  right: 0;
+  
+  margin-top: -2px;
+  
+  border-style: solid;
+  
+  border-color: #F2CB05;
+  
+  border-color: var( — fc-now-indicator-color,#F2CB05);
+  
+  border-width: 5px 0 0;
+  
+  } */
