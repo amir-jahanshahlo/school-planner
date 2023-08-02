@@ -49,3 +49,19 @@
   background: #FFF !important;
   border: none !important;
 } 
+
+
+.fc .fc-col-header-cell-cushion {
+  display: inline-block;
+}
+
+.selectable-circle {
+  background-color: #3498db; /* Replace this with the desired circle color */
+  border-radius: 50%;
+  width: 20px; /* Adjust size as needed */
+  height: 20px; /* Adjust size as needed */
+  display: inline-block;
+  cursor: pointer;
+  text-align: center;
+  line-height: 20px;
+}
