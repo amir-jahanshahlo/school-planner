@@ -18,19 +18,12 @@ function Calendar() {
     right: "timeGridWeek,timeGridDay",
   };
 
-  const [selectedDate, setSelectedDate] = useState(null);
-
-  const isDateSelected = (date) => {
-    return selectedDate && date.toDateString() === selectedDate.toDateString();
-  };
+  const [setSelectedDate] = useState(null);
 
   const handleDateClick = (date) => {
     setSelectedDate(date);
     // Perform other actions when a date is clicked
   };
-
-
-  
 
   function renderHeader(arg) {
     const weekday = ["S", "M", "T", "W", "T", "F", "S"];
@@ -55,18 +48,30 @@ function Calendar() {
       </div>
     );
   }
-  
-  
-  
-  
-  
+
   // Customize the time slot duration and format for AM/PM
   const slotDuration = "00:30:00"; // Change this to set the desired duration (30 minutes in this example)
   const slotLabelFormat = {
     hour: "numeric",
     hour12: true, // Use 12-hour clock format (AM/PM)
   };
-  
+
+  const slotLabelContent = (arg) => {
+    const { date } = arg;
+    const hour = date.getHours();
+    const amPm = hour >= 12 ? "pm" : "am";
+    const formattedHour = hour % 12 === 0 ? 12 : hour % 12;
+    return (
+      <div>
+          {formattedHour}
+          {amPm}
+      </div>
+      
+    );
+  };
+
+  const slotMinTime = "00:00:00";
+
 
   return (
     <div>
@@ -80,8 +85,9 @@ function Calendar() {
         dayHeaderContent={renderHeader}
         selectable={true}
         slotDuration={slotDuration} // Apply the custom slot duration
-        slotLabelFormat={slotLabelFormat} 
-        
+        slotLabelFormat={slotLabelFormat}
+        slotLabelContent={slotLabelContent}
+        slotMinTime={slotMinTime} // Set the minimum time to start from 12 AM
       />
     </div>
   );
