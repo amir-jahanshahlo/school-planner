@@ -95,6 +95,15 @@ function Calendar() {
             date: e.startStr
           })
         }}
+        // Determines whether the events on the calendar can be modified.
+        editable={true}
+        dayMaxEvents= {true} // when too many events in a day, show the popover
+        // Allow events’ start times to be editable through dragging.
+        eventStartEditable={true}
+        // Whether the user can resize an event from its starting edge.
+        eventResizableFromStart={true}
+        // eventDurationEditable={true} i dont know what the hell is this
+        droppable={true}
       />
     </div>
   );
